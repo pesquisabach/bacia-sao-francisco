@@ -3,149 +3,184 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Página educativa sobre a Bacia Hidrográfica do Rio São Francisco, suas regiões, importância, desafios e o projeto de transposição.">
 <title>Bacia Hidrográfica do Rio São Francisco</title>
 <style>
-:root{
-  --blue:#0b5ea8; --blue2:#0a3d62; --cyan:#38bdf8;
-  --green:#238b57; --sand:#f4ead5; --ink:#17324d;
-  --white:#fff; --muted:#587086; --card:#ffffffeb;
-}
+:root{--forest:#174b35;--green:#26734d;--leaf:#5d9b62;--mint:#e8f2e7;--sand:#f4efdf;--ink:#20352a;--muted:#5d7062;--white:#fff;--line:#d9e5d8;--gold:#d9ad55}
 *{box-sizing:border-box;scroll-behavior:smooth}
-body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;color:var(--ink);
-background:linear-gradient(180deg,#eaf8ff 0%,#f8fcfa 45%,#f3f0e7 100%);line-height:1.65}
-nav{position:sticky;top:0;z-index:10;background:#ffffffed;backdrop-filter:blur(12px);
-border-bottom:1px solid #d9e8f0;display:flex;gap:8px;justify-content:center;flex-wrap:wrap;padding:10px}
-nav a{color:var(--blue2);text-decoration:none;font-weight:700;padding:8px 12px;border-radius:999px}
-nav a:hover{background:#e8f5ff}
-.hero{min-height:72vh;display:grid;place-items:center;text-align:center;padding:70px 20px;
-background:
-radial-gradient(circle at 20% 20%,#fff8 0 8%,transparent 28%),
-linear-gradient(135deg,#0b5ea8,#087f8a 58%,#238b57)}
-.hero-inner{max-width:900px;color:white}
-.kicker{text-transform:uppercase;letter-spacing:.16em;font-size:.8rem;font-weight:800;opacity:.9}
-h1{font-size:clamp(2.4rem,7vw,5.5rem);line-height:.98;margin:16px 0}
-.hero p{font-size:clamp(1rem,2.4vw,1.3rem);max-width:720px;margin:0 auto 28px}
-.button{display:inline-block;background:white;color:var(--blue2);padding:12px 20px;border-radius:999px;
-font-weight:800;text-decoration:none;box-shadow:0 8px 25px #003a5a44}
-main{max-width:1050px;margin:auto;padding:40px 18px}
-section{padding:46px 0}
-h2{font-size:clamp(1.8rem,4vw,2.8rem);margin:0 0 14px}
-.lead{color:var(--muted);font-size:1.08rem}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px;margin-top:24px}
-.card{background:var(--card);border:1px solid #d9e8ef;border-radius:22px;padding:22px;
-box-shadow:0 10px 30px #0b5ea812}
-.card strong{display:block;font-size:1.55rem;color:var(--blue)}
-.card h3{margin-top:0}
-.pill{display:inline-block;padding:6px 10px;border-radius:999px;background:#e5f5ed;color:#17633e;font-weight:800;font-size:.8rem}
+body{margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);background:linear-gradient(180deg,#f4f7ef 0%,#fff 42%,#f3f0e4 100%);line-height:1.7}
+img{display:block;width:100%;object-fit:cover}
+a{color:#216744}
+nav{position:sticky;top:0;z-index:10;background:#fffffff2;backdrop-filter:blur(12px);border-bottom:1px solid var(--line);display:flex;gap:6px;justify-content:center;flex-wrap:wrap;padding:10px}
+nav a{color:var(--forest);text-decoration:none;font-weight:750;padding:8px 12px;border-radius:999px;white-space:nowrap;font-size:.92rem}
+nav a:hover{background:var(--mint)}
+.hero{min-height:76vh;display:grid;place-items:center;text-align:center;padding:70px 20px;color:white;background:linear-gradient(90deg,#123c2bdc,#174b35a8),url("https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=2000&q=85") center/cover}
+.hero-inner{max-width:950px}
+.kicker{text-transform:uppercase;letter-spacing:.16em;font-size:.78rem;font-weight:850;color:#e2efce}
+h1{font-size:clamp(2.5rem,7vw,5.6rem);line-height:1.02;margin:18px 0}
+.hero p{font-size:clamp(1rem,2.5vw,1.3rem);max-width:760px;margin:0 auto 28px;color:#f2f8ee}
+.button{display:inline-block;background:#f5f0dc;color:var(--forest);padding:12px 20px;border-radius:999px;font-weight:850;text-decoration:none;box-shadow:0 8px 25px #102c1e55}
+main{max-width:1120px;margin:auto;padding:28px 20px 50px}
+section{padding:48px 0;scroll-margin-top:85px}
+h2{font-size:clamp(1.8rem,4vw,2.8rem);line-height:1.15;margin:12px 0}
+h3{line-height:1.25}
+.lead{color:var(--muted);font-size:1.08rem;max-width:900px}
+.pill{display:inline-block;padding:5px 11px;border-radius:999px;background:#e4efdc;color:#285b3b;font-weight:850;font-size:.78rem;letter-spacing:.02em}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:17px;margin-top:24px}
+.card{background:#fff;border:1px solid var(--line);border-radius:22px;overflow:hidden;box-shadow:0 10px 28px #23452a0b}
+.card-body{padding:21px}
+.card strong.big{display:block;font-size:clamp(1.35rem,3vw,1.8rem);color:var(--forest);line-height:1.2;margin-bottom:9px}
+.card h3{margin:0 0 8px;color:var(--forest)}
+.card p{margin:0;color:var(--muted)}
+.photo{height:220px}
+.caption{font-size:.82rem;color:var(--muted);padding:8px 13px;background:#f7f8f2}
+.note{background:linear-gradient(135deg,#174b35,#2e7750);color:white;border-radius:26px;padding:26px;margin-top:24px}
+.note p{margin-bottom:0}
 .timeline{display:grid;gap:14px;margin-top:22px}
-.region{border-left:5px solid var(--blue);background:white;border-radius:0 18px 18px 0;padding:18px 20px;
-box-shadow:0 7px 22px #17324d12}
-.region:nth-child(2){border-color:#159a72}.region:nth-child(3){border-color:#d49b2a}.region:nth-child(4){border-color:#8b5cf6}
+.region{border-left:5px solid var(--leaf);background:#fff;border-radius:0 18px 18px 0;padding:18px 22px;box-shadow:0 7px 22px #173b2610}
+.region:nth-child(2){border-color:#b4a35b}.region:nth-child(3){border-color:#c88745}.region:nth-child(4){border-color:#6e9e80}
+.region h3{margin:0 0 5px;color:var(--forest)}
+.region p{margin:0;color:var(--muted)}
 .uses{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-top:20px}
-.use{padding:18px;border-radius:18px;background:#edf8ff;text-align:center;font-weight:800}
-.note{background:linear-gradient(135deg,#0a3d62,#0b5ea8);color:white;border-radius:26px;padding:28px;margin-top:25px}
-footer{padding:35px 18px;text-align:center;color:#60778a;background:#eef3f5}
-.sources a{color:var(--blue);font-weight:700}
-@media(max-width:600px){nav{justify-content:flex-start;overflow:auto;flex-wrap:nowrap}.hero{min-height:65vh}}
+.use{padding:18px 12px;border-radius:18px;background:var(--mint);text-align:center;font-weight:800;color:var(--forest)}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center;margin-top:22px}
+.split img{height:100%;min-height:280px;border-radius:24px}
+.list{padding-left:22px}
+.list li{margin:8px 0}
+.tag{display:inline-block;border:1px solid #c8dcc8;border-radius:10px;padding:4px 9px;margin:3px;font-size:.86rem;color:var(--forest);background:#fbfdf8}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:22px}
+.gallery figure{margin:0;background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.gallery img{height:190px}
+.gallery figcaption{padding:12px;font-size:.9rem;color:var(--muted)}
+.two-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:20px}
+.good{border-top:5px solid #548d55}.attention{border-top:5px solid #c59a43}
+.sources a{font-weight:750}
+.sources li{margin:10px 0}
+footer{padding:35px 18px;text-align:center;color:#5d7062;background:#e9eee3;border-top:1px solid var(--line)}
+footer strong{color:var(--forest)}
+.small{font-size:.88rem;color:var(--muted)}
+@media(max-width:700px){nav{justify-content:flex-start;overflow-x:auto;flex-wrap:nowrap}nav a{font-size:.85rem;padding:8px 10px}.hero{min-height:68vh}.split{grid-template-columns:1fr}.split img{min-height:220px;height:250px}.gallery{grid-template-columns:1fr}.gallery img{height:220px}.two-cards{grid-template-columns:1fr}main{padding:20px 16px 40px}section{padding:36px 0}}
 </style>
 </head>
 <body>
-<nav>
-  <a href="#sobre">Sobre</a><a href="#numeros">Números</a><a href="#regioes">Regiões</a>
-  <a href="#importancia">Importância</a><a href="#desafios">Desafios</a><a href="#fontes">Fontes</a>
+<nav aria-label="Navegação principal">
+<a href="#sobre">Sobre</a><a href="#numeros">Números</a><a href="#regioes">Regiões</a><a href="#importancia">Importância</a><a href="#transposicao">Transposição</a><a href="#ambiente">Meio ambiente</a><a href="#galeria">Fotos</a><a href="#fontes">Fontes</a>
 </nav>
-
 <header class="hero">
-  <div class="hero-inner">
-    <div class="kicker">Geografia • Recursos hídricos • Brasil</div>
-    <h1>Bacia Hidrográfica do Rio São Francisco</h1>
-    <p>Conheça a bacia do “Velho Chico”: seu território, suas regiões, seus usos e os principais desafios relacionados à água.</p>
-    <a class="button" href="#sobre">Explorar a página ↓</a>
-  </div>
+<div class="hero-inner">
+<div class="kicker">Geografia • Recursos hídricos • Brasil</div>
+<h1>Bacia Hidrográfica do Rio São Francisco</h1>
+<p>Um rio que conecta paisagens, comunidades e atividades econômicas — e que nos ajuda a entender os desafios da água no Brasil.</p>
+<a class="button" href="#sobre">Explorar a página ↓</a>
+</div>
 </header>
-
 <main>
 <section id="sobre">
-  <span class="pill">O que é?</span>
-  <h2>Uma bacia que conecta diferentes paisagens</h2>
-  <p class="lead">
-    Uma bacia hidrográfica é a área em que as águas das chuvas e de seus cursos d’água escoam
-    para um mesmo rio principal e seus afluentes. A Bacia do São Francisco ocupa uma grande área
-    do território brasileiro e acompanha o rio desde suas nascentes em Minas Gerais até sua foz
-    entre Alagoas e Sergipe.
-  </p>
-  <div class="note">
-    <strong>Por que ela chama tanta atenção?</strong><br>
-    Porque reúne ambientes muito diferentes, atravessa áreas de importância econômica e social
-    e possui papel importante no abastecimento, na agricultura, na geração de energia e na navegação.
-  </div>
+<span class="pill">01 · Conheça a bacia</span>
+<h2>Uma bacia que conecta diferentes paisagens</h2>
+<p class="lead">Uma bacia hidrográfica é a área em que a água da chuva escoa para um rio principal e seus afluentes. A Bacia do São Francisco se estende por partes do Sudeste, Centro-Oeste e Nordeste, desde as nascentes em Minas Gerais até a foz no Oceano Atlântico, entre Alagoas e Sergipe.</p>
+<div class="split">
+<div>
+<h3>O “Velho Chico”</h3>
+<p>O Rio São Francisco é conhecido como “Velho Chico” e também como “rio da integração nacional”, pois atravessa áreas com paisagens, culturas e condições climáticas diferentes. Suas águas são importantes para cidades, comunidades rurais, agricultura, geração de energia e ecossistemas.</p>
+<p>O rio principal passa por Minas Gerais, Bahia, Pernambuco, Alagoas e Sergipe. A bacia hidrográfica, por sua vez, abrange também Goiás e o Distrito Federal.</p>
+<div><span class="tag">Sudeste</span><span class="tag">Centro-Oeste</span><span class="tag">Nordeste</span></div>
+</div>
+<img src="https://images.unsplash.com/photo-1433086966358-54859d0ed716?auto=format&fit=crop&w=1100&q=85" alt="Paisagem natural com água corrente e vegetação" loading="lazy">
+</div>
+<div class="note"><strong>Por que ela é tão importante?</strong><p>Porque a água é um recurso essencial e precisa atender a diferentes usos sem comprometer a saúde do rio. Planejar a bacia significa considerar tanto as pessoas quanto os ambientes naturais.</p></div>
 </section>
-
 <section id="numeros">
-  <span class="pill">Em números</span>
-  <h2>A dimensão do São Francisco</h2>
-  <div class="grid">
-    <div class="card"><strong>≈ 639 mil km²</strong>Área de drenagem da bacia.</div>
-    <div class="card"><strong>≈ 2.863 km</strong>Extensão do rio considerando a nascente geográfica indicada pela Codevasf.</div>
-    <div class="card"><strong>7</strong>Unidades da Federação abrangidas pela bacia: MG, GO, BA, PE, AL, SE e DF.</div>
-    <div class="card"><strong>4</strong>Regiões fisiográficas usadas no planejamento: Alto, Médio, Submédio e Baixo São Francisco.</div>
-  </div>
+<span class="pill">02 · Em números</span><h2>A dimensão do São Francisco</h2>
+<div class="grid">
+<div class="card"><div class="card-body"><strong class="big">≈ 636 mil km²</strong><p>Área aproximada da bacia hidrográfica, segundo a Codevasf.</p></div></div>
+<div class="card"><div class="card-body"><strong class="big">≈ 2.863 km</strong><p>Extensão do rio considerando a nascente geográfica indicada pela Codevasf.</p></div></div>
+<div class="card"><div class="card-body"><strong class="big">7 unidades</strong><p>Minas Gerais, Goiás, Bahia, Pernambuco, Alagoas, Sergipe e Distrito Federal.</p></div></div>
+<div class="card"><div class="card-body"><strong class="big">4 regiões</strong><p>Alto, Médio, Submédio e Baixo São Francisco.</p></div></div>
+</div>
+<p class="small">Os números podem variar um pouco entre publicações conforme os critérios de medição e delimitação utilizados.</p>
 </section>
-
 <section id="regioes">
-  <span class="pill">Divisão da bacia</span>
-  <h2>Quatro regiões fisiográficas</h2>
-  <div class="timeline">
-    <div class="region"><h3>01 · Alto São Francisco</h3><p>Região das nascentes até a área de Pirapora (MG). É a porção mais ao sul do curso principal.</p></div>
-    <div class="region"><h3>02 · Médio São Francisco</h3><p>Estende-se de Pirapora (MG) até a região de Remanso (BA), abrangendo uma grande área da bacia.</p></div>
-    <div class="region"><h3>03 · Submédio São Francisco</h3><p>Vai de Remanso (BA) até Paulo Afonso (BA), região marcada por grandes reservatórios e aproveitamento hidrelétrico.</p></div>
-    <div class="region"><h3>04 · Baixo São Francisco</h3><p>Segue de Paulo Afonso até a foz, na divisa entre Alagoas e Sergipe.</p></div>
-  </div>
+<span class="pill">03 · Divisão da bacia</span><h2>Quatro regiões fisiográficas</h2>
+<p class="lead">A divisão em regiões ajuda a estudar as diferenças de relevo, clima, ocupação humana e uso da água ao longo da bacia.</p>
+<div class="timeline">
+<div class="region"><h3>01 · Alto São Francisco</h3><p>Região das nascentes até a área de Pirapora, em Minas Gerais. Inclui áreas de Cerrado e trechos próximos às nascentes do rio.</p></div>
+<div class="region"><h3>02 · Médio São Francisco</h3><p>Estende-se de Pirapora até a região de Remanso, na Bahia. É uma área extensa, com afluentes importantes e paisagens que incluem Cerrado e Caatinga.</p></div>
+<div class="region"><h3>03 · Submédio São Francisco</h3><p>Vai da região de Remanso até Paulo Afonso. Possui grandes reservatórios e aproveitamento hidrelétrico, além de áreas de agricultura irrigada.</p></div>
+<div class="region"><h3>04 · Baixo São Francisco</h3><p>Segue de Paulo Afonso até a foz, entre Alagoas e Sergipe. O rio encontra o Oceano Atlântico e sustenta comunidades e ecossistemas ribeirinhos.</p></div>
+</div>
 </section>
-
 <section id="importancia">
-  <span class="pill">Por que é importante?</span>
-  <h2>Água com muitos usos</h2>
-  <p class="lead">A água da região atende a diferentes necessidades da população e das atividades econômicas.</p>
-  <div class="uses">
-    <div class="use">Abastecimento</div><div class="use">Irrigação</div><div class="use">Agricultura</div>
-    <div class="use">Energia</div><div class="use">Navegação</div><div class="use">Ecossistemas</div>
-  </div>
-  <div class="card" style="margin-top:18px">
-    <h3>Um rio de importância nacional</h3>
-    <p>
-      O São Francisco é o maior rio totalmente brasileiro em extensão. Sua bacia também tem
-      importância histórica e econômica para várias regiões do país.
-    </p>
-  </div>
+<span class="pill">04 · Usos da água</span><h2>Um rio, muitas funções</h2>
+<p class="lead">A gestão da bacia precisa conciliar diferentes necessidades, especialmente em períodos de seca e baixa disponibilidade de água.</p>
+<div class="uses">
+<div class="use">Abastecimento humano</div><div class="use">Agricultura irrigada</div><div class="use">Geração de energia</div><div class="use">Pesca</div><div class="use">Navegação</div><div class="use">Turismo</div><div class="use">Biodiversidade</div><div class="use">Atividades locais</div>
+</div>
+<div class="grid">
+<div class="card"><img class="photo" src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=900&q=85" alt="Campo agrícola e paisagem rural" loading="lazy"><div class="card-body"><h3>Agricultura</h3><p>A irrigação permite produzir alimentos em áreas com chuvas irregulares, mas precisa ser planejada para evitar desperdício e conflitos pelo uso da água.</p></div></div>
+<div class="card"><img class="photo" src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=900&q=85" alt="Estruturas de produção de energia em uma paisagem" loading="lazy"><div class="card-body"><h3>Energia</h3><p>Reservatórios e usinas hidrelétricas do sistema do São Francisco têm papel importante no fornecimento de eletricidade para o país.</p></div></div>
+<div class="card"><img class="photo" src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=900&q=85" alt="Paisagem de natureza com água e montanhas" loading="lazy"><div class="card-body"><h3>Natureza e lazer</h3><p>O rio e seus ambientes sustentam espécies, atividades de pesca, turismo e práticas culturais de muitas comunidades.</p></div></div>
+</div>
 </section>
-
-<section id="desafios">
-  <span class="pill">Desafios</span>
-  <h2>Nem tudo são águas tranquilas</h2>
-  <div class="grid">
-    <div class="card"><h3>Secas e estiagens</h3><p>A região apresenta períodos de baixa disponibilidade hídrica, especialmente em áreas do Semiárido.</p></div>
-    <div class="card"><h3>Qualidade da água</h3><p>O cuidado com a qualidade da água é essencial para manter seus diferentes usos e proteger os ecossistemas.</p></div>
-    <div class="card"><h3>Uso múltiplo</h3><p>Abastecimento, irrigação, energia, navegação e outros usos precisam ser conciliados na gestão dos recursos hídricos.</p></div>
-  </div>
+<section id="transposicao">
+<span class="pill">05 · Tema principal</span><h2>Transposição do Rio São Francisco</h2>
+<p class="lead">O nome oficial do empreendimento é Projeto de Integração do Rio São Francisco com Bacias Hidrográficas do Nordeste Setentrional (PISF). Ele foi planejado para levar água a sistemas e bacias que enfrentam escassez hídrica no semiárido nordestino.</p>
+<div class="split">
+<div>
+<h3>Como funciona?</h3>
+<p>O projeto capta parte da água do São Francisco e a conduz por uma infraestrutura formada por canais, túneis, aquedutos, reservatórios e estações de bombeamento. A água é encaminhada a rios e reservatórios que podem apoiar o abastecimento de municípios beneficiados.</p>
+<p>Não é simplesmente “mudar o rio de lugar”: trata-se de um sistema de integração hídrica que exige energia, operação, manutenção e planejamento para distribuir a água.</p>
+</div>
+<img src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=1100&q=85" alt="Água em movimento em uma paisagem natural; imagem ilustrativa, não representa uma estrutura específica da transposição" loading="lazy">
+</div>
+<div class="grid">
+<div class="card"><div class="card-body"><strong class="big">477 km</strong><p>Extensão total informada pelo Ministério responsável para os dois eixos principais.</p></div></div>
+<div class="card"><div class="card-body"><strong class="big">2 eixos</strong><p>Eixo Norte e Eixo Leste, que conduzem água para sistemas hídricos do Nordeste Setentrional.</p></div></div>
+<div class="card"><div class="card-body"><strong class="big">390 municípios</strong><p>Número de municípios contemplados informado pelo Ministério.</p></div></div>
+<div class="card"><div class="card-body"><strong class="big">≈ 12 milhões</strong><p>População que o projeto foi planejado para beneficiar, segundo dados oficiais do empreendimento.</p></div></div>
+</div>
+<div class="two-cards">
+<div class="card good"><div class="card-body"><h3>Possíveis benefícios</h3><ul class="list"><li>Maior segurança hídrica para comunidades atendidas.</li><li>Apoio ao abastecimento humano em períodos de estiagem.</li><li>Reforço a sistemas de reservatórios e adutoras.</li><li>Possibilidade de apoiar atividades econômicas locais.</li></ul></div></div>
+<div class="card attention"><div class="card-body"><h3>Desafios e debates</h3><ul class="list"><li>Garantir distribuição justa e eficiente da água.</li><li>Custos de energia, operação e manutenção.</li><li>Monitorar efeitos ambientais e proteger os ecossistemas.</li><li>Conciliar a retirada de água com as necessidades do próprio São Francisco.</li></ul></div></div>
+</div>
+<div class="note"><strong>Uma questão geográfica importante</strong><p>A transposição pode ajudar regiões com escassez, mas não substitui outras medidas: reduzir perdas nos sistemas de abastecimento, proteger nascentes, tratar esgoto, conservar a vegetação e planejar o uso da água continuam sendo fundamentais.</p></div>
+<p class="small">Os números acima são dados oficiais de planejamento e abrangência do projeto; não significam que todos os municípios recebem água da mesma forma ou continuamente.</p>
 </section>
-
+<section id="ambiente">
+<span class="pill">06 · Meio ambiente</span><h2>Desafios para conservar o Velho Chico</h2>
+<div class="grid">
+<div class="card"><div class="card-body"><h3>Secas e estiagens</h3><p>Chuvas irregulares e altas taxas de evaporação podem reduzir a água disponível, sobretudo em áreas do semiárido.</p></div></div>
+<div class="card"><div class="card-body"><h3>Poluição da água</h3><p>Esgoto sem tratamento, lixo e resíduos de atividades humanas podem prejudicar a qualidade da água e os seres vivos.</p></div></div>
+<div class="card"><div class="card-body"><h3>Desmatamento e erosão</h3><p>A retirada da vegetação nas margens e nas nascentes pode aumentar a erosão e o transporte de sedimentos para o rio.</p></div></div>
+<div class="card"><div class="card-body"><h3>Uso múltiplo</h3><p>Abastecimento, irrigação, energia e conservação ambiental precisam ser considerados em conjunto na gestão da bacia.</p></div></div>
+</div>
+<div class="split">
+<img src="https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=1100&q=85" alt="Ambiente natural com vegetação e vida silvestre" loading="lazy">
+<div><h3>O que ajuda a proteger a bacia?</h3><ul class="list"><li>Preservar nascentes e matas ciliares.</li><li>Ampliar o saneamento e o tratamento de esgoto.</li><li>Evitar jogar lixo em rios e córregos.</li><li>Usar água de forma eficiente na agricultura, nas cidades e nas casas.</li><li>Monitorar a qualidade da água e recuperar áreas degradadas.</li></ul></div>
+</div>
+</section>
+<section id="galeria">
+<span class="pill">07 · Galeria visual</span><h2>Paisagens e água</h2>
+<p class="lead">Estas imagens ajudam a ilustrar temas de água, paisagem e conservação. São fotografias ilustrativas e não devem ser identificadas como locais específicos do Rio São Francisco.</p>
+<div class="gallery">
+<figure><img src="https://images.unsplash.com/photo-1433086966358-54859d0ed716?auto=format&fit=crop&w=900&q=85" alt="Água corrente em meio à vegetação" loading="lazy"><figcaption>Água e paisagem natural</figcaption></figure>
+<figure><img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=900&q=85" alt="Paisagem de montanhas e água" loading="lazy"><figcaption>Relevo e recursos hídricos</figcaption></figure>
+<figure><img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=900&q=85" alt="Área agrícola e campo" loading="lazy"><figcaption>Uso da terra e produção rural</figcaption></figure>
+</div>
+<p>Para fotografias documentais do próprio São Francisco, consulte a <a href="https://www.gov.br/ana/pt-br/imagens/imagens-das-regioes-hidrograficas/regiao-hidrografica-sao-francisco" target="_blank" rel="noopener noreferrer">galeria oficial da ANA</a>.</p>
+</section>
 <section id="fontes" class="sources">
-  <span class="pill">Fontes consultadas</span>
-  <h2>De onde vieram as informações?</h2>
-  <p>Os dados principais desta página foram organizados a partir de fontes institucionais:</p>
-  <ul>
-    <li><a href="https://www.gov.br/ana/pt-br/assuntos/gestao-das-aguas/panorama-das-aguas/regioes-hidrograficas/regiao-hidrografica-sao-francisco/regiao-hidrografica-sao-francisco" target="_blank">Agência Nacional de Águas e Saneamento Básico (ANA)</a></li>
-    <li><a href="https://www.gov.br/codevasf/pt-br/acesso-a-informacao/institucional/area-de-atuacao/bacias-hidrograficas" target="_blank">Codevasf — Bacias Hidrográficas</a></li>
-    <li><a href="https://cbhsaofrancisco.org.br/a-bacia/" target="_blank">Comitê da Bacia Hidrográfica do Rio São Francisco (CBHSF)</a></li>
-  </ul>
-  <p style="color:#71879a;font-size:.9rem">Página criada para fins educacionais. Dados e descrições podem ser atualizados conforme novas publicações oficiais.</p>
+<span class="pill">08 · Referências</span><h2>Fontes para continuar pesquisando</h2>
+<p class="lead">As informações e os números podem ser conferidos nas fontes institucionais abaixo.</p>
+<ul>
+<li><a href="https://www.gov.br/codevasf/pt-br/acesso-a-informacao/institucional/area-de-atuacao/bacias-hidrograficas" target="_blank" rel="noopener noreferrer">Codevasf — Bacias hidrográficas</a>: área, extensão e estados abrangidos pela Bacia do São Francisco.</li>
+<li><a href="https://www.gov.br/ana/pt-br/assuntos/gestao-das-aguas/panorama-das-aguas/regioes-hidrograficas/regiao-hidrografica-sao-francisco/regiao-hidrografica-sao-francisco" target="_blank" rel="noopener noreferrer">Agência Nacional de Águas e Saneamento Básico (ANA)</a>: características da região hidrográfica e desafios de gestão.</li>
+<li><a href="https://www.gov.br/mdr/pt-br/assuntos/seguranca-hidrica/projeto-sao-francisco" target="_blank" rel="noopener noreferrer">Ministério da Integração e do Desenvolvimento Regional — Projeto São Francisco</a>: dados, eixos e municípios contemplados pela integração.</li>
+<li><a href="https://cbhsaofrancisco.org.br/a-bacia/" target="_blank" rel="noopener noreferrer">Comitê da Bacia Hidrográfica do Rio São Francisco (CBHSF)</a>: informações sobre a bacia e sua gestão.</li>
+</ul>
+<p class="small">Página educativa para trabalho escolar. As imagens externas dependem de conexão com a internet e podem ser substituídas por fotografias oficiais com créditos adequados.</p>
 </section>
 </main>
-
-<footer>
-  <strong>Bacia Hidrográfica do Rio São Francisco</strong><br>
-  Trabalho escolar • Página informativa
-</footer>
+<footer><strong>Bacia Hidrográfica do Rio São Francisco</strong><br>Trabalho escolar • Página informativa<br><span class="small">Conhecer a água é também aprender a cuidar dela.</span></footer>
 </body>
 </html>
